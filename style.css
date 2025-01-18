@@ -11,9 +11,11 @@ header {
     background-position: center;
     background-size: cover;
 }
+header div {
+    background-color: #ede4d974;
+    padding: 1em;
+}
 nav {
-    display: flex;
-    flex-direction: row-reverse;
     background-color: #74361e;
     color: #ede4d9;
 }
@@ -22,29 +24,36 @@ nav button {
     width: 4em;
 }
 nav ul {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    margin: 0;
-    width: 100%;
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+   display: flex;
+   flex-direction: column;
+   border: 1px solid #ede4d9;
 }
 nav li {
-    width: 100%;
-    text-align: right;
-    margin-right: 6em;
 }
 nav li a {
-    padding: 0.5em 6em 1em 0.5em;
+    padding: 0.5em 1em;
+    border: 1px solid #ede4d9;
     background-color: #74361e;
     color: #ede4d9;
     display: block;
     text-decoration: none;
-    font-weight: 600;
-    width: 100%;
 }
 nav li a:hover {
     color: #74361e;
     background-color: #ede4d9;
+}
+#navbar {
+    opacity: 0;
+    height: auto;
+    transform: translateX(-200em);
+    transition: opacity 1.5s, transform 1s;
+}
+#navbar.open {
+    transform: translateX(0);
+    opacity: 1;
 }
 header,
 section,

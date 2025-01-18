@@ -12,16 +12,16 @@
 </head>
 <body>
     <header>
-        <nav>
-            <button class="hamburger">
-                <i class="material-icons">close</i>
-            </button>
+        <button class="hamburger" id="menu-toggle">
+            <span id="menu-icon" class="material-icons open">menu</span>
+        </button>
+        <nav id="navbar">
             <ul>
                 <li><a href="index.html">home</a></li>
                 <li><a href="#">cuts</a></li>
                 <li><a href="#">techniques</a></li>
                 <li><a href="#">seasoning</a></li>
-                <li><a href="#">doness</a></li>
+                <li><a href="#">doneness</a></li>
             </ul>
         </nav>
         <div>
@@ -78,5 +78,27 @@
     <footer>
         <p>Website design created by <a href="mailto:winikkc@hsd.k12.or.us">Chris Winikka</a> &copy; 2024-25.</p>
     </footer>
+    <script>
+        const menuBtn = document.getElementById("menu-toggle");
+        const navbar = document.getElementById("navbar");
+        const menuIcon = document.getElementById("menu-icon");
+        menuBtn.addEventListener('click', toggleMenu);
+
+        // add or remove class to menu button on a click
+        function toggleMenu() {
+            navbar.classList.toggle("open");
+            menuBtn.classList.toggle("open");
+            menuIcon.classList.toggle("open");
+
+            // change text of icon based on the class value
+            if ( menuIcon.classList.contains("open")) {
+                menuIcon.innerHTML = "menu";
+            }
+            else {
+                menuIcon.innerHTML = "close";
+            }
+
+        }
+    </script>
 </body>
 </html>
