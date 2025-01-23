@@ -31,8 +31,6 @@ nav ul {
    flex-direction: column;
    border: 1px solid #ede4d9;
 }
-nav li {
-}
 nav li a {
     padding: 0.5em 1em;
     border: 1px solid #ede4d9;
@@ -59,11 +57,60 @@ header,
 section,
 footer {
     padding: 0.5em 1em;
+    clear: both;
 }
 section:nth-child(odd) {
     background-color: #ede4d9;
 }
+figure {
+    max-width: 500px;
+}
+figure img {
+    width: 100%;
+}
 footer {
     background-color: #74361e;
     color: #ede4d9;
+}
+
+/* tablet size 600px or so */
+@media screen and (min-width: 600px) {
+    nav ul {
+        flex-direction: row;
+    }
+    #menu-toggle {
+        transform: translateX(-200em);
+    }
+    #navbar {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/* full screen styles */
+@media screen and (min-width: 800px) {
+    body {
+        font-size: x-large;
+    }
+    header {
+        padding-top: 0;
+        height: 20em;
+    }
+    header div {
+        width: 70%;
+        margin-top: 4em;
+    }
+    figure {
+        float: right;
+    }
+    figure.left {
+        float: left;
+    }
+    p {
+        max-width: 40em;
+    }
+    section div {
+        width: 50em;
+        max-width: 98%;
+        margin: 0 auto;
+    }
 }
